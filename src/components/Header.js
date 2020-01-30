@@ -11,7 +11,7 @@ const Header = () => (
     </nav>
     <section>
       <h1>Fun Fun Fun Madlibs</h1>
-      <h2>Fill in the blanks for Fun Fun Fun?</h2>
+      <h2>Fill in the blanks for Fun Fun Fun</h2>
     </section>
   </header>
 );
