@@ -42,7 +42,25 @@ export default class Madlib extends Component{
     }));
   }
 
-  handleReset 
+  handleReset = ({ target }) => {
+    this.setState(previousState =>  ({
+      ...previousState, 
+      text: {
+        'O': '',
+        '1': '',
+        '2': '',
+        '3': '',
+        '4': '',
+        '5': '',
+        '6': '',
+        '7': '',
+        '8': '',
+        '9': '',
+        '1O': '',
+        '11': '',
+      }
+    }));
+  }
   // reset all inputs in state to empty string / pass it to form and put on button 
 
 
@@ -50,9 +68,11 @@ export default class Madlib extends Component{
     const { showResult } = this.state;
     return (
       <>
-        {!showResult && <Form onSubmit={this.handleSubmit} onChange={this.handleChange}  text={this.state.text}/>}
+        {!showResult && <Form onSubmit={this.handleSubmit} onChange={this.handleChange}  text={this.state.text} handleReset={this.handleReset} />}
         {showResult && <Result words={this.state.words} closeResult={this.toggleResult} />}
       </>
     );
   }
 }
+// handleReset={this.state.text} 
+// showResults={this.handle}
