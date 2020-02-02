@@ -59,9 +59,10 @@ export default class Madlib extends Component{
         '1O': '',
         '11': '',
       }
-    }));
+    })
+    );
   }
-  // reset all inputs in state to empty string / pass it to form and put on button 
+  
 
 
   render() {
@@ -74,5 +75,3 @@ export default class Madlib extends Component{
     );
   }
 }
-// handleReset={this.state.text} 
-// showResults={this.handle}
